@@ -8,3 +8,29 @@
 
 </body>
 </html>
+<script>
+    function insertNumberToArray(arr, x, index) {
+        if (index < 0 || index > arr.length) {
+            return arr
+        } else {
+            let newArr = []
+            for (let i = 0; i < arr.length; i++) {
+                if (i === index) {
+                    newArr.push(x)
+                }
+                newArr.push(arr[i])
+            }
+            if (index === arr.length) {
+                newArr.push(x)
+            }
+            return newArr
+        }
+    }
+
+    let numbers = [1, 2, 3, 4, 5]
+    let x = 10
+    let index = 2
+    let result = insertNumberToArray(numbers, x, index)
+    console.log(result)
+
+</script>
