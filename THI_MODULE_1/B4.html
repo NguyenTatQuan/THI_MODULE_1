@@ -14,20 +14,37 @@
         constructor (radius) {
             this.radius = radius;
         }
+
         getRadius() {
             return this.radius;
         }
+
         setRadius(radius) {
             this.radius = radius;
         }
+
         getArea() {
             return Math.PI * this.radius * this.radius;
         }
+
         getCircumference() {
             return 2 * Math.PI * this.radius;
         }
     }
 
+    let myCircle = new Circle(50);
+    let radius = myCircle.getRadius();
 
+    myCircle.setRadius(80);
+    myCircle.getRadius(50);
+
+    document.write(myCircle.getRadius());
+
+    let canvas = document.getElementById("DemoCanvas");
+    let ctx = canvas.getContext('2d');
+    ctx.fillStyle='#000000';
+    ctx.beginPath();
+    ctx.arc(100, 100, radius, 0, 2 * Math.PI);
+    ctx.fill();
 
 </script>
